@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>local</ProjectType>
+    <ProjectVersion>7.10.377</ProjectVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3C599ADE-96E3-4070-80BE-4C86435633D1}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <AssemblyName>CSLiteScript</AssemblyName>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <RootNamespace>CSLiteScript</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="CSLiteScriptInfo.cs" />
+    <Compile Include="Common\BaseParser.cs" />
+    <Compile Include="LiteScript\Pascal_Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LiteScript\Pascal_Scanner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\CSLiteExceptionHandler.cs" />
+    <Compile Include="Syntax\TokenClass.cs" />
+    <Compile Include="Syntax\Token.cs" />
+    <Compile Include="Common\BaseScanner.cs" />
+    <Compile Include="Common\BaseScripter.cs" />
+    <Compile Include="Track\Breakpoint.cs" />
+    <Compile Include="Track\BreakpointList.cs" />
+    <Compile Include="Syntax\CallStack.cs" />
+    <Compile Include="Syntax\CallStackRec.cs" />
+    <Compile Include="Syntax\ScriptObject.cs" />
+    <Compile Include="Syntax\MemberObject.cs" />
+    <Compile Include="Syntax\ClassObject.cs" />
+    <Compile Include="LiteScript\Code.cs" />
+    <Compile Include="Common\CSLite_TypedList.cs" />
+    <Compile Include="Common\StringList.cs" />
+    <Compile Include="Syntax\IntegerList.cs" />
+    <Compile Include="Common\Contact_Integers.cs" />
+    <Compile Include="Syntax\SimpleIntegerList.cs" />
+    <Compile Include="Syntax\SimpleIntegerStack.cs" />
+    <Compile Include="Syntax\IntegerStack.cs" />
+    <Compile Include="Syntax\ObjectStack.cs" />
+    <Compile Include="Common\ConvertHelper.cs" />
+    <Compile Include="LiteScript\CSharp_Parser.cs" />
+    <Compile Include="LiteScript\CSharp_Scanner.cs" />
+    <Compile Include="Syntax\ExitKind.cs" />
+    <Compile Include="Syntax\EntryStack.cs" />
+    <Compile Include="Track\ErrorList.cs" />
+    <Compile Include="Track\Errors.cs" />
+    <Compile Include="Common\EventRec.cs" />
+    <Compile Include="Common\EventDispatcher.cs" />
+    <Compile Include="Common\EventObject.cs" />
+    <Compile Include="Syntax\FieldObject.cs" />
+    <Compile Include="Syntax\FunctionObject.cs" />
+    <Compile Include="Syntax\IndexObject.cs" />
+    <Compile Include="Syntax\MemberList.cs" />
+    <Compile Include="Syntax\Modifier.cs" />
+    <Compile Include="Syntax\ModifierList.cs" />
+    <Compile Include="Common\Module.cs" />
+    <Compile Include="Common\ModuleList.cs" />
+    <Compile Include="Syntax\InstanceProperty.cs" />
+    <Compile Include="Syntax\InstancePropertyList.cs" />
+    <Compile Include="Syntax\ObjectObject.cs" />
+    <Compile Include="Common\ParserList.cs" />
+    <Compile Include="EvalHelper.cs" />
+    <Compile Include="LiteScript\CSLite_Scripter.cs">
+    </Compile>
+    <Compile Include="LiteScript\ScripterState.cs" />
+    <Compile Include="Common\CSLiteChangeStateEventArgs.cs" />
+    <Compile Include="Common\CSLiteChangeStateHandler.cs" />
+    <Compile Include="Common\RunningHandler.cs" />
+    <Compile Include="LiteScript\CSLite_ScriptForbid.cs" />
+    <Compile Include="Syntax\Upcase.cs" />
+    <Compile Include="Common\CSLite_Language.cs" />
+    <Compile Include="Syntax\MemberKind.cs" />
+    <Compile Include="Syntax\ParamMod.cs" />
+    <Compile Include="Syntax\ClassKind.cs" />
+    <Compile Include="Common\StandardType.cs" />
+    <Compile Include="Common\CSLite_Types.cs" />
+    <Compile Include="Common\RegisteredType.cs" />
+    <Compile Include="Common\RegisteredTypeList.cs" />
+    <Compile Include="Common\StandardTypeList.cs" />
+    <Compile Include="Common\RunMode.cs" />
+    <Compile Include="LiteScript\CSLite_System.cs" />
+    <Compile Include="Syntax\ProgRec.cs" />
+    <Compile Include="Syntax\PropertyObject.cs" />
+    <Compile Include="Track\ScriptError.cs" />
+    <Compile Include="Track\ScriptErrorList.cs" />
+    <Compile Include="Syntax\SymbolRec.cs" />
+    <Compile Include="Syntax\SymbolRecConstInt.cs" />
+    <Compile Include="Syntax\SymbolRecVarInt.cs" />
+    <Compile Include="Syntax\SymbolRecVarBool.cs" />
+    <Compile Include="Syntax\SymbolRecVarLong.cs" />
+    <Compile Include="Syntax\SymbolRecVarFloat.cs" />
+    <Compile Include="Syntax\SymbolRecVarDouble.cs" />
+    <Compile Include="Syntax\SymbolRecVarDecimal.cs" />
+    <Compile Include="Syntax\SymbolRecVarString.cs" />
+    <Compile Include="Syntax\SymbolTable.cs" />
+    <Compile Include="Syntax\TryStack.cs" />
+    <Compile Include="LiteScript\VB_Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LiteScript\VB_Scanner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

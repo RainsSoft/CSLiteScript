@@ -1,0 +1,5 @@
+E:\GitHub\paxscriptnet2.6\CSLiteScript\bin\Debug\CSLiteScript.dll
+E:\GitHub\paxscriptnet2.6\CSLiteScript\bin\Debug\CSLiteScript.pdb
+E:\GitHub\paxscriptnet2.6\CSLiteScript\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\GitHub\paxscriptnet2.6\CSLiteScript\obj\x86\Debug\CSLiteScript.dll
+E:\GitHub\paxscriptnet2.6\CSLiteScript\obj\x86\Debug\CSLiteScript.pdb
